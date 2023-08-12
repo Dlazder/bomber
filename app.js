@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 const config = {
     "akbarsa": {
         "url": "https://www.akbars.ru/api/PhoneConfirm/",
