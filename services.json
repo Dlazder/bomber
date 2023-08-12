@@ -1,0 +1,18 @@
+{
+    "akbarsa": {
+        "url": "https://www.akbars.ru/api/PhoneConfirm/",
+        "data": {
+            "phoneNumber": "phone"
+        },
+        "response": 200,
+        "timeout": 300
+    },
+    "telegram": {
+        "url": "https://my.telegram.org/auth/send_password",
+        "data": {
+            "phone": "phone"
+        },
+        "response": 200,
+        "timeout": 120
+    }
+}
