@@ -1,12 +1,13 @@
 import fs from 'fs';
 import axios from 'axios';
-const services = JSON.parse(fs.readFileSync('services.json', 'utf-8'));
+
+const regex = /\*phone\*/g;
 const phone = '+79096573052';
 
-for (let key in services) {
-    const service = services[key]
+const services = JSON.parse(fs.readFileSync('services.json', 'utf-8').replace(regex, phone));
 
-    service.data.phone = phone;
+for (let i in services) {
+    const service = services[i]
 
     axios.post(service.url, service.data)
     .then(res => console.log('responce code:', res.status))
