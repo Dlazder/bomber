@@ -1,13 +1,18 @@
+import fs from 'fs';
 import axios from 'axios';
-const config = {
-    "akbarsa": {
-        "url": "https://www.akbars.ru/api/PhoneConfirm/",
-        "json": {"phoneNumber": "+79096573052"},
-        "response": 200,
-        "timeout": 300
-    },
-}
+const services = JSON.parse(fs.readFileSync('services.json', 'utf-8'));
+const phone = '+79096573052';
 
-axios.post(config.akbarsa.url, config.akbarsa.json)
-.then(res => console.log('response Code:', res.status))
-.catch(err => {console.log(err)})
+for (let key in services) {
+  const service = services[key]
+  service.data.phone = phone;
+
+  axios.post(service.url, service.data)
+  .then(res => {
+    console.log(`${service.url} | ${res.status}`)
+  })
+  .catch(err => {
+    console.log(`${service.url} | ${err.response.status}`);
+   })
+
+}
