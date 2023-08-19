@@ -2,17 +2,26 @@
     "akbarsa": {
         "url": "https://www.akbars.ru/api/PhoneConfirm/",
         "data": {
+<<<<<<< HEAD
             "phone": "phone"
         },
         "response": 200,
         "timeout": 300
+=======
+            "phoneNumber": "*phone*"
+        }
+>>>>>>> 66dd800e0d2bcc4ece828c528b2cdfb7414d2b9e
     },
     "telegram": {
         "url": "https://my.telegram.org/auth/send_password",
         "data": {
-            "phone": "phone"
-        },
-        "response": 200,
-        "timeout": 120
+            "phone": "*phone*"
+        }
+    },
+    "youla": {
+        "url": "https://youla.ru/web-api/auth/request_code",
+        "data": {
+            "phone": "*phone*"
+        }
     }
 }
