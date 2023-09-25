@@ -1,27 +1,39 @@
 {
-    "akbarsa": {
-        "url": "https://www.akbars.ru/api/PhoneConfirm/",
-        "data": {
-<<<<<<< HEAD
-            "phone": "phone"
-        },
-        "response": 200,
-        "timeout": 300
-=======
-            "phoneNumber": "*phone*"
-        }
->>>>>>> 66dd800e0d2bcc4ece828c528b2cdfb7414d2b9e
-    },
-    "telegram": {
-        "url": "https://my.telegram.org/auth/send_password",
-        "data": {
-            "phone": "*phone*"
-        }
-    },
-    "youla": {
-        "url": "https://youla.ru/web-api/auth/request_code",
-        "data": {
-            "phone": "*phone*"
-        }
-    }
+	"akbarsa": {
+		"verified": "true",
+		"url": "https://www.akbars.ru/api/PhoneConfirm/",
+		"data": {
+			"phoneNumber": "*phone*"
+		}
+	},
+	"telegram": {
+		"verified": "true",
+		"url": "https://my.telegram.org/auth/send_password",
+		"data": {
+			"phone": "*phone*"
+		}
+	},
+	"youla": {
+		"verified": "true",
+  	"url": "https://youla.ru/web-api/auth/request_code",
+		"data": {
+			"phone": "*phone*"
+		}
+  },
+	"magnit": {
+		"verified": "false",
+		"url": "https://new.moy.magnit.ru/local/ajax/login/",
+		"data": {
+			"phone": "*phone*",
+			"ksid": "ee191257-a4fe-4e39-9f0f-079c7f721eee_0"
+		}
+	},
+	"pochtabank": {
+		"verified": "true",
+		"url": "https://my.pochtabank.ru/dbo/registrationService/ib/phoneNumber",
+		"data": {
+			"confirmation": "send",
+			"phone": "*phone*"
+		}
+	}
 }
