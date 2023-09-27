@@ -12,5 +12,12 @@
 			"phone": "*phone*",
 			"ksid": "ee191257-a4fe-4e39-9f0f-079c7f721eee_0"
 		}
+	},
+	"pochtabank": {
+        "url": "https://my.pochtabank.ru/dbo/registrationService/b/phoneNumber",
+        "json": {
+        	"confirmation": "send",
+        	"phone": "*phone()*"
+        },
 	}
 }
